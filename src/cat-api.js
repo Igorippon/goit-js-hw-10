@@ -1,5 +1,6 @@
 import axios from "axios";
 
+export { fetchBreeds, fetchCatByBreed };
 
 axios.defaults.headers.common["x-api-key"] = "live_G0SqVQ6QZpL6QWvVDAASmnOlFyUOBciulMwdByWWwREm4apabAMPrg2GqeSBJavg";
 axios.defaults.baseURL = "https://api.thecatapi.com/v1";
@@ -21,4 +22,3 @@ return axios.get('/breeds/').then(resp => {
         return resp.data;
 })
 }
-export { fetchBreeds, fetchCatByBreed };

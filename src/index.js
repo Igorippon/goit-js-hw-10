@@ -22,6 +22,7 @@ refs.select.addEventListener("change", handlerOutput);
 function handlerOutput(evt) {
    Notiflix.Loading.standard();
     addDisplayNone(refs.div);
+
     const breedId = refs.select.value;
        fetchCatByBreed(breedId)
            .then(data => {
@@ -72,6 +73,3 @@ function addDisplayNone(elem){
     elem.style.display = 'none';
 }
 
-function addDisplayBlock(elem){
-    elem.style.display = 'block';
-}
